@@ -3,7 +3,7 @@
 - `@babel/core`: babel engine; transforms ES6 javascript to browser-compatible JS.
 - `@babel/preset-env`: babel preset that allows you to use the latest JS
 - `@babel/preset-react`: babel preset for React
-
+- `node-sass`: sass engine
 - `react`: framework for React apps.
 - `react-dom`: server renderers for React.
 - `webpack`: configurable module bundler

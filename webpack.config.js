@@ -34,7 +34,14 @@ const config = {
     new HTMLWebpackPlugin({
       template: path.resolve("public/index.html"),
     }),
-  ]
+  ],
+
+  resolve: {
+    extensions: [
+      ".js",
+      ".jsx",
+    ]
+  }
 };
 
 module.exports = config;

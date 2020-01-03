@@ -1,0 +1,47 @@
+$tablet-width: 1024px;
+$medium-screen-width: 1366px;
+$large-screen-width: 1922px;
+
+///  @link https://css-tricks.com/centering-css-complete-guide/
+@mixin centerVerticallyAndHorizontally() {
+    //  Need to define height and width
+    position: absolute;
+    top:      0;
+    right:    0;
+    bottom:   0;
+    left:     0;
+
+    margin:   auto;
+}
+
+@mixin centerHorizontally() {
+    display: block;
+    margin: 0 auto;
+}
+
+@mixin centerVertically() {
+    //  Need to define height
+    position: absolute;
+    top:      0;
+    bottom:   0;
+
+    margin:   auto;
+}
+
+//  sass-lint:disable max-line-length
+///  @link http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+//  sass-lint:enable max-line-length
+@mixin respondTo($media) {
+    //  sass-lint:disable-block indentation
+    @if $media == tablets {
+        @media only screen and (min-width: $tablet-width) and
+            (max-width: $medium-screen-width - 1) { @content; }
+    }
+    @else if $media == medium-screens {
+        @media only screen and (min-width: $medium-screen-width) and
+            (max-width: $large-screen-width - 1) { @content; }
+    }
+    @else if $media == wide-screens {
+        @media only screen and (min-width: $large-screen-width) { @content; }
+    }
+}
