@@ -37,6 +37,10 @@ const config = {
   ],
 
   resolve: {
+    alias: {
+      components: path.resolve("src/components"),
+    },
+
     extensions: [
       ".js",
       ".jsx",
