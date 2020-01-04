@@ -3,9 +3,6 @@
     [
       "@babel/preset-env",
       {
-        //  Let webpack handle modules
-        "modules": false,
-
         "targets": {
           "browsers": [
             "last 2 Chrome versions",

@@ -39,6 +39,7 @@ const config = {
   resolve: {
     alias: {
       components: path.resolve("src/components"),
+      services: path.resolve("src/services"),
     },
 
     extensions: [
